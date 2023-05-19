@@ -6,6 +6,17 @@ import { NavLink } from "react-router-dom";
 
 export default function CustomNavbar() {
 
+    const [language, setLanguage] = React.useState("EN");
+
+    const changeLanguange = () => {
+
+        if(language === "GR")
+            setLanguage("UK");
+        else
+            setLanguage("GR");
+    }
+
+
     return (
         <Navbar fixed="top" expand="lg">
             <Container>
@@ -29,6 +40,7 @@ export default function CustomNavbar() {
                             <div style={{ "fontWeight": "600" }}>Επικοινωνία</div>
                         </NavLink>
                     </Nav>
+                    <div onClick={changeLanguange} className={language == "GR" ? "language language-GR" : "language language-EN"}>{language == "GR" ? "ΕΛ" : "EN"}</div>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

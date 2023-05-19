@@ -224,3 +224,78 @@ html{
     align-items: center;
     padding-left: 1rem;
 }
+
+.language{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600 !important;
+    font-size: 20px !important;
+    color: var(--accent-color) !important;
+    margin-left:5rem;
+}
+
+.language:hover{
+    cursor: pointer;
+}
+
+.language-GR::before{
+    background-image: url('../Images/greece-flag.svg');
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    content:"";
+    margin-right: 0.2rem;
+    border-radius: 0px;
+}
+
+.language-EN::before{
+    background-image: url('../Images/united-kingdom-flag-uk.svg');
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    content:"";
+    margin-right: 0.2rem;
+    border-radius: 10px;
+}
+
+.news-blob{
+    height:50%;
+    rotate: 177deg;
+    z-index: -1;
+    position: absolute;
+    content: url('../Images/blob2-removebg-preview.png');
+    margin-top: 10rem;
+}
+
+.news-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-right: 15rem;
+    max-width: 50%;
+}
+
+.news-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.news{
+   
+    margin: 1rem;
+}
+
+.news-title{
+    text-align: center;
+}
+
+.news-top-image{
+    mask: url('../Images/news-mask-blob.png');
+    mask-repeat: no-repeat;
+    mask-size: 300px 200px;
+    width: 300px;
+    height: 200px;
+
+}

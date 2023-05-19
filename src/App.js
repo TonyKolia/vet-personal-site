@@ -4,6 +4,7 @@ import Home from "./Components/Home";
 import Doctor from "./Components/Doctor";
 import Services from "./Components/Services";
 import Contact from "./Components/Contact";
+import News from "./Components/News";
 import CustomNavbar from "./Components/Navbar";
 import "./CSS/style.css";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<Doctor />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/news" element={<News />} />
         </Routes>
       </Router>
     </>
