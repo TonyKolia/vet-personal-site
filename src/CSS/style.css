@@ -4,6 +4,7 @@
     --background-color:#ffedde;
     --base-color: #1aa3ff;
     --accent-color: #595959;
+    --bold-color: #143156;
 }
 
 body{
@@ -85,13 +86,17 @@ html{
     padding-top: 2rem !important;
 }
 
-.circle{
+.blob{
+    /*
     border-radius: 100%;
     height: 530px;
     width: 530px;
-    background-color: var(--base-color);
+    background-color: var(--base-color);*/
+    height:50%;
+    rotate: 120deg;
     z-index: -1;
     position: absolute;
+    content: url('../Images/blob_c-removebg-preview.png');
 }
 
 .circle2{
@@ -107,6 +112,20 @@ html{
     height: 70%;
 }
 
+.mask{
+    mask-image: url('../Images/organic-blob-shape-png.png');
+    mask-repeat: no-repeat;
+    mask-size: 600px 600px;
+    height: 65%;
+}
+
+
+
+.about-doc-image{
+    height: 70%;
+    border-radius: 100%;
+}
+
 .highlighted-text{
     color: var(--base-color);
 }
@@ -115,3 +134,93 @@ html{
     color: var(--accent-color);
 }
 
+.super-bold{
+    color: var(--bold-color);
+    font-weight: 800;
+    font-size: 4.5rem;
+}
+
+.blob2{
+    /*
+    border-radius: 100%;
+    height: 530px;
+    width: 530px;
+    background-color: var(--base-color);*/
+    height:50%;
+    rotate: 289deg;
+    margin-top: 10rem;
+    z-index: -1;
+    position: absolute;
+    content: url('../Images/blob2-removebg-preview.png');
+}
+
+.services-img{
+    height:50%;
+    rotate: 184deg;
+    margin-top: 10rem;
+    z-index: -1;
+    position: absolute;
+    content: url('../Images/blob2-removebg-preview.png');
+}
+
+.contact-blob{
+    height:50%;
+    rotate: 177deg;
+    margin-top: 10rem;
+    z-index: -1;
+    position: absolute;
+    content: url('../Images/blob2-removebg-preview.png');
+}
+
+.contact-image{
+    height: 60%;
+}
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.about-text-container{
+    padding-right: 15rem;
+}
+
+.info-text{
+    text-align: justify;
+}
+
+.about-page-image{
+    margin-right: -15rem;
+}
+
+.contact-container{
+    padding-right: 25rem;
+}
+
+.contact-icons-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-information-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-record{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-left: 1rem;
+}
