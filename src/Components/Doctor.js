@@ -1,7 +1,13 @@
 import React from "react";
 import "../CSS/style.css";
+import  cookie from 'react-cookie';
 
 export default function Doctor() {
+
+    React.useEffect(() => {
+
+        let cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)language\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    },[]);
 
     return (
         <div className="page-content-container">
