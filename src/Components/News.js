@@ -5,14 +5,17 @@ export default function News() {
 
     return (
         <>
-            <div className="home-container">
-                <div className="about-container about-page-image">
+            <div className="page-content-container">
+                <div className="page-part page-image">
                     <div className="news-blob">
                     </div>
-                    <img className="news-image" src={require("../Images/news.png")} />
+                    <img className="front-image" src={require("../Images/news.png")} />
                 </div>
-                <div className="news-container">
-                    <h1 className="super-bold">Νέα</h1>
+                <div className="page-part">
+                <div className="header">
+                    <h1>Νέα</h1>
+                </div>
+                <div className="text-container">
                     <div className="news-row">
                         <div className="news">
                             <img className="news-top-image" src={require("../Images/news-placeholder.png")} />
@@ -36,6 +39,7 @@ export default function News() {
                             <h5 className="highlighted-text news-title">Τίτλος τέταρτου νέου</h5>
                             <h6 className="accent-color info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h6>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

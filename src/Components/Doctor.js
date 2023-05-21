@@ -1,29 +1,30 @@
 import React from "react";
 import "../CSS/style.css";
 
-export default function Doctor(){
+export default function Doctor() {
 
     return (
-        <div className="home-container">
-            <div className="about-container about-page-image">
-                <div className="blob2">
+        <div className="page-content-container">
+            <div className="page-part page-image">
+                <div className="about-blob">
                 </div>
-                <img className="about-doc-image" src={require("../Images/doc-doc-page-removebg-preview.png")} />
+                <img className="front-image" style={{"borderBottomLeftRadius": "100%", "borderBottomRightRadius": "100%"}} src={require("../Images/doc-removebg-preview.png")} />
             </div>
-            <div className="about-container">
-                <div className="about-text-container">
-                    <h1 className="super-bold">Η γιατρός</h1>
-                    <br/>
+            <div className="page-part for-text">
+                <div className="header">
+                    <h1>Η γιατρός</h1>
+                    <br />
+                </div>
+                <div className="text-container">
+                    
                     <h4 className="highlighted-text">Βασικές πληροφορίες</h4>
                     <h6 className="accent-color info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
-                    <br/>
+                    <br />
                     <h4 className="highlighted-text">Σπουδές</h4>
                     <h6 className="accent-color info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h6>
-                    <br/>
+                    <br />
                     <h4 className="highlighted-text">Περιστατικά</h4>
-                    <h6 className="accent-color info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h6>
-
-
+                    <h6 className="accent-color info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br /> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h6>
                 </div>
 
             </div>

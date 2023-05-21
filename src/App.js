@@ -12,14 +12,18 @@ function App() {
   return (
     <>
       <Router>
+        
+        <div className="main-container">
         <CustomNavbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<Doctor />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/news" element={<News />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<Doctor />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/news" element={<News />} />
+          </Routes>
+        </div>
+
       </Router>
     </>
   );

@@ -4,7 +4,7 @@ import "../CSS/style.css";
 export default function Home() {
 
     return (
-        <div className="home-container">
+        <div className="page-content-container">
             <div className="welcome-container"></div>
 
             <div className="welcome-container">

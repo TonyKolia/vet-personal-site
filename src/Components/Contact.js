@@ -9,15 +9,18 @@ export default function Contact() {
     return (
 
         <>
-            <div className="home-container">
-                <div className="about-container about-page-image">
+            <div className="page-content-container">
+                <div className="page-part page-image">
                     <div className="contact-blob">
                     </div>
-                    <img className="contact-image" src={require("../Images/contact.png")} />
+                    <img className="front-image" src={require("../Images/contact.png")} />
                 </div>
-                <div className="about-container">
-                    <div className="about-text-container contact-container">
-                        <h1 className="super-bold">Επικοινωνία</h1>
+                <div className="page-part contact-page">
+                    <div className="header">
+                        <h1>Επικοινωνία</h1>
+                        <br/>
+                    </div>
+                    <div className="text-container ">
                         <div className="contact-info-container">
                             <div className="contact-icons-container">
                                 <h4 className="highlighted-text"><FontAwesomeIcon icon={faPhone} /></h4>
