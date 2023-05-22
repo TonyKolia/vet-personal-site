@@ -170,7 +170,7 @@ html{
 }
 
 .front-image{
-    height: 70%;
+    height: 80%;
 }
 
 
@@ -195,7 +195,7 @@ html{
 }
 
 .about-blob{
-    height:50%;
+    height:60%;
     rotate: 265deg;
     z-index: -1;
     position: absolute;
@@ -205,7 +205,7 @@ html{
 .services-blob,
 .contact-blob,
 .news-blob {
-    height:50%;
+    height:60%;
     rotate: 177deg;
     z-index: -1;
     position: absolute;
@@ -218,7 +218,6 @@ html{
 }
 
 .page-image{
-    margin-right: -15rem;
     justify-content: center;
 }
 
@@ -324,7 +323,7 @@ html{
 }
 
 /*tablet vertical 768x1024*/
-@media (max-width: 768px){
+@media (max-width: 991px){
 
     .page-content-container{
         flex-direction: column;
@@ -413,6 +412,13 @@ html{
         width: auto;
     }
 
+    .about-blob,
+    .services-blob,
+    .news-blob,
+    .contact-blob{
+        height: 25%;
+    }
+
     .news-row{
         flex-direction: column;
         align-items: center;
@@ -448,6 +454,11 @@ html{
     }
     .page-content-container{
         justify-content: flex-end;
+        margin-top: 3rem;
+    }
+
+    .page-content-container.home{
+        justify-content: flex-start;
     }
 }
 
@@ -466,7 +477,7 @@ html{
     }
 
     .blob{
-        height: 24%;
+        height: 32%;
     }
 
     .front-image{
@@ -494,7 +505,7 @@ html{
 @media (max-width: 320px){
 
     .front-image{
-        height: 40%;
+        height: 50%;
         width: auto;
     }
 
@@ -502,7 +513,24 @@ html{
     .services-blob,
     .news-blob,
     .contact-blob{
-        height: 23%;
+        height: 25%;
+    }
+
+    .blob{
+        height: 25%;
+    }
+
+    .home-doc-image{
+        height: 50%;
+    }
+    
+    .header > h1,
+    .super-bold{
+        font-size: 2.8rem;
+    }
+
+    h6{
+        font-size: 0.9rem !important;
     }
 }
 

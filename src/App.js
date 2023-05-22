@@ -28,6 +28,9 @@ function App() {
 
   React.useEffect(() => {
 
+    if(window.innerWidth === 1920)
+      return;
+
     let togglers = document.getElementsByClassName("navbar-toggler");
     if(togglers.length === 0)
       return;

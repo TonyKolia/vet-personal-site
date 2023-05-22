@@ -12,9 +12,10 @@ export default function Doctor() {
     return (
         <div className="page-content-container">
             <div className="page-part page-image">
-                <div className="about-blob">
+            <div className="about-blob">
                 </div>
                 <img className="front-image" style={{"borderBottomLeftRadius": "100%", "borderBottomRightRadius": "100%"}} src={require("../Images/doc-removebg-preview.png")} />
+                
             </div>
             <div className="page-part for-text">
                 <div className="header">
