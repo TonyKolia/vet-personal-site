@@ -20,30 +20,34 @@ function App() {
     let cookieLanguage = document.cookie.replace(/(?:(?:^|.*;\s*)language\s*\=\s*([^;]*).*$)|^.*$/, "$1");
     if (cookieLanguage !== "" && cookieLanguage !== null)
       setLanguage(cookieLanguage);
-    else{
+    else {
       setLanguage("GR");
       setCookie("language", "GR", { path: "/" });
-    }   
+    }
   }, []);
 
-  /*
+  React.useEffect(() => {
 
-    React.useEffect(() => {
+    let togglers = document.getElementsByClassName("navbar-toggler");
+    if(togglers.length === 0)
+      return;
 
     let navbarLinks = document.getElementsByClassName("nav-link");
-    navbarLinks.forEach(link => {
-      
-    });
+    for(let i=0; i<navbarLinks.length; i++){
+      navbarLinks[i].addEventListener("click", () => {
+        togglers[0].click();
+      });
+    }
 
-  },[]);
-   */
+  }, []);
+
 
 
 
   React.useEffect(() => {
     setCookie("language", language, { path: "/" });
 
-    if(language === "GR")
+    if (language === "GR")
       document.title = "Κτηνίατρος - Αράπη Ελεάννα";
     else
       document.title = "Veterinarian - Arapi Eleanna";

@@ -329,10 +329,16 @@ html{
     .page-content-container{
         flex-direction: column;
         overflow: unset;
-        justify-content: space-around;
+        justify-content: center;
     }
 
-    .text-container,
+    .text-container{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-right: 0;
+        overflow: unset;
+    }
+
     .welcome-container{
         padding-left: 1rem;
         padding-right: 1rem;
@@ -341,8 +347,14 @@ html{
         overflow: unset;
     }
 
+    .welcome-container:last-child,
+    .welcome-container:first-child{
+        display: none;
+    }
+
     .page-part{
         overflow: unset;
+        min-height: 70%;
     }
 
     .header{
@@ -388,6 +400,10 @@ html{
         width: 15px; 
         height: 15px;
         color: var(--base-color) !important;
+    }
+
+    .home-doc-image{
+        height: 100%;
     }
 }
 
