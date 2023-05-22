@@ -13,6 +13,7 @@ body{
     background-size: 1920px 1080px;
     background-position: bottom;
     font-family: 'Roboto', sans-serif;
+    background-attachment: fixed;
 }
 
 html{
@@ -308,3 +309,87 @@ html{
     height: 150px;
 
 }
+
+/*laptop 1366x768*/
+@media (max-width: 1366px){
+
+    .page-image{
+        margin-right: 0;
+    }
+
+    .news{
+        padding: 0.3rem;
+        width: 50%;
+    }
+}
+
+/*tablet vertical 768x1024*/
+@media (max-width: 768px){
+
+    .page-content-container{
+        flex-direction: column;
+        overflow: unset;
+        justify-content: space-around;
+    }
+
+    .text-container,
+    .welcome-container{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-right: 0;
+        max-height: 100%;
+        overflow: unset;
+    }
+
+    .page-part{
+        overflow: unset;
+    }
+
+    .header{
+        padding-left: 1rem;
+    }
+
+    .page-image{
+        margin-right: 0;
+        justify-content: flex-end;
+    }
+
+    .news{
+        padding: 0.3rem;
+        width: 50%;
+    }
+
+    .about-blob,
+    .services-blob,
+    .news-blob,
+    .contact-blob{
+        height: fit-content;
+    }
+
+    .blob{
+        height: 30%;
+    }
+
+    .language{
+        margin-left: calc(0.2rem + 15px);
+    }
+
+    .navbar{
+        position: sticky;
+    }
+
+    #navbar-container{
+        background-color: #fffef9 !important;
+    }
+    
+    .navbar-toggler-icon{
+        background-image: url('../Images/paw-solid.svg') !important;
+        display: inline-block;
+        width: 15px; 
+        height: 15px;
+        color: var(--base-color) !important;
+    }
+}
+
+
+

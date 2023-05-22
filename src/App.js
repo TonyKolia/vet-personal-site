@@ -26,6 +26,19 @@ function App() {
     }   
   }, []);
 
+  /*
+
+    React.useEffect(() => {
+
+    let navbarLinks = document.getElementsByClassName("nav-link");
+    navbarLinks.forEach(link => {
+      
+    });
+
+  },[]);
+   */
+
+
 
   React.useEffect(() => {
     setCookie("language", language, { path: "/" });

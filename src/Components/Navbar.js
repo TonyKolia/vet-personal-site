@@ -7,8 +7,8 @@ import { NavLink } from "react-router-dom";
 export default function CustomNavbar(props) {
 
     return (
-        <Navbar fixed="top" expand="lg">
-            <Container>
+        <Navbar id="navbar-container" fixed="top" expand="lg">
+            <Container >
                 <Navbar.Brand href="/"><img style={{ "height": "60px" }} src={require("../Images/logo.png")} /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

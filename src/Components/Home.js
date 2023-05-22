@@ -15,7 +15,7 @@ export default function Home() {
                 
             </div>
             <div className="welcome-container">
-                <div className="home-text-container">
+                <div className="text-container">
                     <h4 className="highlighted-text">Πάντα δίπλα σε κάθε μικρό μας φίλο</h4>
                     <h1 className="super-bold">Γνωρίστε την Δρ. Ελεάννα Αράπη</h1>
                     <h6 className="accent-color">Κτηνίατρος με ειδίκευση στα μικρά ζώα η οποία, μαζί με την ομάδα της, είναι έτοιμη να σταθεί στο πλάι κάθε ζώου που χρειάζεται βοήθεια.</h6>
