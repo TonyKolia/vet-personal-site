@@ -141,26 +141,7 @@ html{
     padding-top: 2rem !important;
 }
 
-.blob{
-    height:50%;
-    rotate: 120deg;
-    z-index: -1;
-    position: absolute;
-    content: url('../Images/blob_c-removebg-preview.png');
-}
 
-.circle2{
-    border-radius: 100%;
-    height: 580px;
-    width: 580px;
-    background-color: #99d6ff;
-    z-index: -2;
-    position: absolute;
-}
-
-.home-doc-image{
-    height: 70%;
-}
 
 .mask{
     mask-image: url('../Images/organic-blob-shape-png.png');
@@ -170,7 +151,8 @@ html{
 }
 
 .front-image{
-    height: 80%;
+    width: 70%;
+    height: auto;
 }
 
 
@@ -194,23 +176,7 @@ html{
     font-size: 4.5rem;
 }
 
-.about-blob{
-    height:60%;
-    rotate: 265deg;
-    z-index: -1;
-    position: absolute;
-    content: url('../Images/blob2-removebg-preview.png');
-}
 
-.services-blob,
-.contact-blob,
-.news-blob {
-    height:60%;
-    rotate: 177deg;
-    z-index: -1;
-    position: absolute;
-    content: url('../Images/blob2-removebg-preview.png');
-}
 
 .info-text{
     text-align: justify;
@@ -370,16 +336,7 @@ html{
         width: 50%;
     }
 
-    .about-blob,
-    .services-blob,
-    .news-blob,
-    .contact-blob{
-        height: fit-content;
-    }
 
-    .blob{
-        height: 30%;
-    }
 
     .language{
         margin-left: calc(0.2rem + 15px);
@@ -412,12 +369,6 @@ html{
         width: auto;
     }
 
-    .about-blob,
-    .services-blob,
-    .news-blob,
-    .contact-blob{
-        height: 25%;
-    }
 
     .news-row{
         flex-direction: column;
@@ -449,9 +400,7 @@ html{
         font-size: 3.5rem;
     }
 
-    .blob{
-        height: 27%;
-    }
+
     .page-content-container{
         justify-content: flex-end;
         margin-top: 3rem;
@@ -476,21 +425,13 @@ html{
         font-size: 3.3rem;
     }
 
-    .blob{
-        height: 32%;
-    }
 
     .front-image{
         height: 48%;
         width: auto;
     }
 
-    .about-blob,
-    .services-blob,
-    .news-blob,
-    .contact-blob{
-        height: 25%;
-    }
+
 
     .text-container{
         max-height: unset;
@@ -509,16 +450,7 @@ html{
         width: auto;
     }
 
-    .about-blob,
-    .services-blob,
-    .news-blob,
-    .contact-blob{
-        height: 25%;
-    }
 
-    .blob{
-        height: 25%;
-    }
 
     .home-doc-image{
         height: 50%;

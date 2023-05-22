@@ -5,14 +5,8 @@ export default function Home() {
 
     return (
         <div className="page-content-container home">
-            <div className="welcome-container"></div>
-
             <div className="welcome-container">
-            <div className="blob">
-                
-                </div>
-                <img className="home-doc-image" src={require("../Images/doctor-home-removebg-preview.png")} />
-                
+                <img className="front-image" src={require("../Images/home2.png")} />
             </div>
             <div className="welcome-container">
                 <div className="text-container">
@@ -20,9 +14,7 @@ export default function Home() {
                     <h1 className="super-bold">Γνωρίστε την Δρ. Ελεάννα Αράπη</h1>
                     <h6 className="accent-color">Κτηνίατρος με ειδίκευση στα μικρά ζώα η οποία, μαζί με την ομάδα της, είναι έτοιμη να σταθεί στο πλάι κάθε ζώου που χρειάζεται βοήθεια.</h6>
                 </div>
-
             </div>
-            <div className="welcome-container"></div>
         </div>
     );
 }

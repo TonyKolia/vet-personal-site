@@ -6,10 +6,8 @@ export default function News() {
     return (
         <>
             <div className="page-content-container">
-                <div className="page-part page-image">
-                    <div className="news-blob">
-                    </div>
-                    <img className="front-image" src={require("../Images/news.png")} />
+                <div className="page-part">
+                    <img className="front-image" src={require("../Images/news2.png")} />
                 </div>
                 <div className="page-part">
                 <div className="header">

@@ -6,10 +6,8 @@ export default function Services() {
 
     return (
         <div className="page-content-container">
-            <div className="page-part page-image">
-                <div className="services-blob">
-                </div>
-                <img className="front-image" src={require("../Images/services-removebg-preview.png")} />
+            <div className="page-part">
+                <img className="front-image" src={require("../Images/services3.png")} />
             </div>
             <div className="page-part">
                 <div className="header">

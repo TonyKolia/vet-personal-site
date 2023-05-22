@@ -10,10 +10,8 @@ export default function Contact() {
 
         <>
             <div className="page-content-container">
-                <div className="page-part page-image">
-                    <div className="contact-blob">
-                    </div>
-                    <img className="front-image" src={require("../Images/contact.png")} />
+                <div className="page-part">
+                    <img className="front-image" src={require("../Images/contact2.png")} />
                 </div>
                 <div className="page-part contact-page">
                     <div className="header">
