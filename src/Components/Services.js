@@ -1,11 +1,11 @@
 import React from "react";
 import "../CSS/style.css";
-
+import {motion} from "framer-motion";
 
 export default function Services() {
 
     return (
-        <div className="page-content-container">
+        <motion.div className="page-content-container" initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{x: -50, opacity: 1}} transition={{duration: 1, ease: [0.6, -0.05, 0.01, 0.99]}}>
             <div className="page-part">
                 <img className="front-image" src={require("../Images/services3.png")} />
             </div>
@@ -28,7 +28,7 @@ export default function Services() {
                     <h6 className="accent-color info-text">Lorem ipsum dolor sit amet eu fugiat nulla pariatur.</h6>                    
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 
 }

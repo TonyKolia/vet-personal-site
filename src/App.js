@@ -1,15 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Components/Home";
-import Doctor from "./Components/Doctor";
-import Services from "./Components/Services";
-import Contact from "./Components/Contact";
-import News from "./Components/News";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+
 import CustomNavbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { CookiesProvider } from 'react-cookie';
 import { useCookies } from 'react-cookie';
+import { AnimatePresence } from "framer-motion";
 import "./CSS/style.css";
+import AnimatedRoutes from "./AnimatedRoutes";
 
 
 function App() {
@@ -17,6 +15,7 @@ function App() {
   const [cookie, setCookie] = useCookies(['language']);
 
   const [language, setLanguage] = React.useState("");
+
 
   React.useEffect(() => {
     let cookieLanguage = document.cookie.replace(/(?:(?:^|.*;\s*)language\s*\=\s*([^;]*).*$)|^.*$/, "$1");
@@ -60,13 +59,9 @@ function App() {
         <Router>
           <div className="main-container">
             <CustomNavbar setLanguage={setLanguage} language={language} />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<Doctor />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/news" element={<News />} />
-            </Routes>
+            <AnimatePresence>
+              <AnimatedRoutes />
+            </AnimatePresence>
             <Footer />
           </div>
         </Router>

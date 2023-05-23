@@ -1,19 +1,19 @@
 import React from "react";
 import "../CSS/style.css";
-import  cookie from 'react-cookie';
+import cookie from 'react-cookie';
+import { motion } from "framer-motion";
 
 export default function Doctor() {
 
     React.useEffect(() => {
 
         let cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)language\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-    },[]);
+    }, []);
 
     return (
-        <div className="page-content-container">
+        <motion.div className="page-content-container" initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{x: -50, opacity: 1}} transition={{duration: 1, ease: [0.6, -0.05, 0.01, 0.99]}}>
             <div className="page-part">
                 <img className="front-image" src={require("../Images/doc2.png")} />
-                
             </div>
             <div className="page-part for-text">
                 <div className="header">
@@ -32,6 +32,6 @@ export default function Doctor() {
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     );
 }
