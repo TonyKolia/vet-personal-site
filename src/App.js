@@ -6,9 +6,11 @@ import Services from "./Components/Services";
 import Contact from "./Components/Contact";
 import News from "./Components/News";
 import CustomNavbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 import { CookiesProvider } from 'react-cookie';
 import { useCookies } from 'react-cookie';
 import "./CSS/style.css";
+
 
 function App() {
 
@@ -28,23 +30,18 @@ function App() {
 
   React.useEffect(() => {
 
-    if(window.innerWidth === 1920)
-      return;
-
     let togglers = document.getElementsByClassName("navbar-toggler");
-    if(togglers.length === 0)
+    if (togglers.length === 0)
       return;
 
     let navbarLinks = document.getElementsByClassName("nav-link");
-    for(let i=0; i<navbarLinks.length; i++){
-      navbarLinks[i].addEventListener("click", () => {
-        togglers[0].click();
-      });
+
+    if (getComputedStyle(togglers[0], null).display !== "none") {
+      for (let i = 0; i < navbarLinks.length; i++)
+        navbarLinks[i].addEventListener("click", () => { togglers[0].click() });
     }
 
   }, []);
-
-
 
 
   React.useEffect(() => {
@@ -70,9 +67,11 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/news" element={<News />} />
             </Routes>
+            <Footer />
           </div>
         </Router>
       </CookiesProvider>
+
     </>
   );
 }

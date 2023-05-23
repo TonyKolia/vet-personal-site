@@ -13,7 +13,7 @@ export default function Contact() {
                 <div className="page-part">
                     <img className="front-image" src={require("../Images/contact2.png")} />
                 </div>
-                <div className="page-part contact-page">
+                <div className="page-part contact-page for-text">
                     <div className="header">
                         <h1>Επικοινωνία</h1>
                         <br/>

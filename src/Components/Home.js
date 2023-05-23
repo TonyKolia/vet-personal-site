@@ -4,11 +4,11 @@ import "../CSS/style.css";
 export default function Home() {
 
     return (
-        <div className="page-content-container home">
-            <div className="welcome-container">
+        <div className="page-content-container">
+            <div className="page-part home-part home-image">
                 <img className="front-image" src={require("../Images/home2.png")} />
             </div>
-            <div className="welcome-container">
+            <div className="page-part home-part for-text">
                 <div className="text-container">
                     <h4 className="highlighted-text">Πάντα δίπλα σε κάθε μικρό μας φίλο</h4>
                     <h1 className="super-bold">Γνωρίστε την Δρ. Ελεάννα Αράπη</h1>

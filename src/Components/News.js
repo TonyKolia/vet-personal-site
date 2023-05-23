@@ -9,7 +9,7 @@ export default function News() {
                 <div className="page-part">
                     <img className="front-image" src={require("../Images/news2.png")} />
                 </div>
-                <div className="page-part">
+                <div className="page-part for-text">
                 <div className="header">
                     <h1>Νέα</h1>
                 </div>

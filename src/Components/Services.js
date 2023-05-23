@@ -9,7 +9,7 @@ export default function Services() {
             <div className="page-part">
                 <img className="front-image" src={require("../Images/services3.png")} />
             </div>
-            <div className="page-part">
+            <div className="page-part for-text">
                 <div className="header">
                     <h1>Υπηρεσίες</h1>
                 </div>
@@ -25,9 +25,7 @@ export default function Services() {
                     <h6 className="accent-color info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h6>
                     <br />
                     <h4 className="highlighted-text">Υπηρεσία 4</h4>
-                    <h6 className="accent-color info-text">Lorem ipsum dolor sit amet eu fugiat nulla pariatur.</h6>
-                    
-                    
+                    <h6 className="accent-color info-text">Lorem ipsum dolor sit amet eu fugiat nulla pariatur.</h6>                    
                 </div>
             </div>
         </div>
