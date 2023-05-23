@@ -332,7 +332,7 @@ html {
         height: unset;
     }
 
-    .footer{
+    .footer {
         position: unset;
         bottom: unset;
     }
@@ -390,11 +390,31 @@ html {
     }
 
     .navbar-toggler-icon {
-        background-image: url('../Images/paw-solid.svg') !important;
+        background-image: url('../Images/paw-solid-brown.svg') !important;
         display: inline-block;
         width: 15px;
         height: 15px;
+        color: var(--accent-color) !important;
+    }
+
+    .navbar-toggler:focus .navbar-toggler-icon {
+        background-image: url('../Images/paw-solid.svg') !important;
         color: var(--base-color) !important;
+    }
+
+    .navbar-toggler.collapsed:focus{
+        border: 1px solid rgba(0,0,0,0.1) !important;
+    }
+
+    .navbar-toggler.collapsed:focus  .navbar-toggler-icon{
+        background-image: url('../Images/paw-solid-brown.svg') !important;
+        color: var(--accent-color) !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+        outline: none !important;
+        border: 1px solid #1aa3ff !important;
     }
 }
 
