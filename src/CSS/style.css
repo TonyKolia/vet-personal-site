@@ -326,6 +326,11 @@ html {
 /*tablet vertical 768x1024*/
 @media (max-width: 768px) {
 
+    .navbar{
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
     .main-container {
         min-height: 100dvh;
         justify-content: space-between;
