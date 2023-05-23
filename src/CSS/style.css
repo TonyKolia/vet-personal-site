@@ -327,7 +327,7 @@ html {
 @media (max-width: 768px) {
 
     .main-container {
-        min-height: 100vh;
+        min-height: 100dvh;
         justify-content: space-between;
         height: unset;
     }
