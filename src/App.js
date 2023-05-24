@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-
 import CustomNavbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { CookiesProvider } from 'react-cookie';
@@ -9,15 +8,14 @@ import { AnimatePresence } from "framer-motion";
 import "./CSS/style.css";
 import AnimatedRoutes from "./AnimatedRoutes";
 
-
 function App() {
 
   const [cookie, setCookie] = useCookies(['language']);
 
   const [language, setLanguage] = React.useState("");
 
-
   React.useEffect(() => {
+
     let cookieLanguage = document.cookie.replace(/(?:(?:^|.*;\s*)language\s*\=\s*([^;]*).*$)|^.*$/, "$1");
     if (cookieLanguage !== "" && cookieLanguage !== null)
       setLanguage(cookieLanguage);
@@ -25,6 +23,7 @@ function App() {
       setLanguage("GR");
       setCookie("language", "GR", { path: "/" });
     }
+    
   }, []);
 
   React.useEffect(() => {
@@ -66,7 +65,6 @@ function App() {
           </div>
         </Router>
       </CookiesProvider>
-
     </>
   );
 }

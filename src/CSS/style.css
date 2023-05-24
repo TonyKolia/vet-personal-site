@@ -323,12 +323,127 @@ html {
     }
 }
 
-/*tablet vertical 768x1024*/
-@media (max-width: 768px) {
+@media (max-width: 991px){
+
+    #navbar-container {
+        background-color: #fffef9 !important;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('../Images/paw-solid-brown.svg') !important;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        color: var(--accent-color) !important;
+    }
+
+    .navbar-toggler:focus .navbar-toggler-icon {
+        background-image: url('../Images/paw-solid.svg') !important;
+        color: var(--base-color) !important;
+    }
+
+    .navbar-toggler.collapsed:focus{
+        border: 1px solid rgba(0,0,0,0.1) !important;
+    }
+
+    .navbar-toggler.collapsed:focus  .navbar-toggler-icon{
+        background-image: url('../Images/paw-solid-brown.svg') !important;
+        color: var(--accent-color) !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+        outline: none !important;
+        border: 1px solid #1aa3ff !important;
+    }
 
     .navbar{
         padding-top: 0.5rem !important;
         padding-bottom: 0.5rem !important;
+    }
+
+    .language {
+        margin-left: calc(0.2rem + 15px);
+    }
+
+    .front-image{
+        width: 50%;
+    }
+
+    .text-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-right: 0;
+        overflow: unset;
+    }
+
+    .page-content-container {
+        flex-direction: column;
+        overflow: unset;
+    }
+
+    .main-container {
+        min-height: 100dvh;
+        justify-content: space-between;
+        height: unset;
+    }
+
+    .footer {
+        position: unset;
+        bottom: unset;
+    }
+
+}
+
+/*tablet vertical 768x1024*/
+@media (max-width: 768px) {
+
+
+    /*
+    #navbar-container {
+        background-color: #fffef9 !important;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('../Images/paw-solid-brown.svg') !important;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        color: var(--accent-color) !important;
+    }
+
+    .navbar-toggler:focus .navbar-toggler-icon {
+        background-image: url('../Images/paw-solid.svg') !important;
+        color: var(--base-color) !important;
+    }
+
+    .navbar-toggler.collapsed:focus{
+        border: 1px solid rgba(0,0,0,0.1) !important;
+    }
+
+    .navbar-toggler.collapsed:focus  .navbar-toggler-icon{
+        background-image: url('../Images/paw-solid-brown.svg') !important;
+        color: var(--accent-color) !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+        outline: none !important;
+        border: 1px solid #1aa3ff !important;
+    }
+
+    .navbar{
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    .language {
+        margin-left: calc(0.2rem + 15px);
+    }
+    */
+
+    .front-image{
+        width: 90%;
     }
 
     .main-container {
@@ -385,42 +500,6 @@ html {
         padding: 0.3rem;
         width: 50%;
     }
-
-    .language {
-        margin-left: calc(0.2rem + 15px);
-    }
-
-    #navbar-container {
-        background-color: #fffef9 !important;
-    }
-
-    .navbar-toggler-icon {
-        background-image: url('../Images/paw-solid-brown.svg') !important;
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        color: var(--accent-color) !important;
-    }
-
-    .navbar-toggler:focus .navbar-toggler-icon {
-        background-image: url('../Images/paw-solid.svg') !important;
-        color: var(--base-color) !important;
-    }
-
-    .navbar-toggler.collapsed:focus{
-        border: 1px solid rgba(0,0,0,0.1) !important;
-    }
-
-    .navbar-toggler.collapsed:focus  .navbar-toggler-icon{
-        background-image: url('../Images/paw-solid-brown.svg') !important;
-        color: var(--accent-color) !important;
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: none !important;
-        outline: none !important;
-        border: 1px solid #1aa3ff !important;
-    }
 }
 
 @media (max-width: 425px) {
@@ -460,7 +539,6 @@ html {
     .super-bold {
         font-size: 3.3rem;
     }
-
 
     .text-container {
         max-height: unset;
