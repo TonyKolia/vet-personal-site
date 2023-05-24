@@ -28,6 +28,8 @@ function App() {
 
   React.useEffect(() => {
 
+    window.addEventListener("resize", () => document.body.style.backgroundSize = `${window.innerWidth}px ${window.innerHeight}px`);
+
     let togglers = document.getElementsByClassName("navbar-toggler");
     if (togglers.length === 0)
       return;

@@ -301,7 +301,7 @@ html {
 }
 
 /*tablet horizontal - low res pc*/
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
 
     .front-image {
         width: 90%;
