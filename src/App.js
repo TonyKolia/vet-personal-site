@@ -23,7 +23,7 @@ function App() {
       setLanguage("GR");
       setCookie("language", "GR", { path: "/" });
     }
-    
+
   }, []);
 
   React.useEffect(() => {
