@@ -312,6 +312,7 @@ html {
     padding-left: 0 !important;
     padding-bottom: 1rem;
     text-align: center;
+    padding-right: 0.5rem;
 }
 
 .front-image.article-image{
@@ -413,7 +414,8 @@ html {
         overflow: unset;
     }
 
-    .info-text{
+    .info-text,
+    .article-header{
         padding-right: 0;
     }
 
