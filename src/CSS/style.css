@@ -188,6 +188,7 @@ html {
 .info-text {
     text-align: justify;
     padding-right: 0.5rem;
+    white-space:pre-line;
 }
 
 .page-image {

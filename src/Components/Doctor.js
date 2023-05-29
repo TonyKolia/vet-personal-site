@@ -1,35 +1,55 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../CSS/style.css";
-import cookie from 'react-cookie';
 import { motion } from "framer-motion";
+import { smoothSlideSideways } from "../Helpers/Animations";
+import { useLocation } from "react-router-dom";
+import { LanguageContext } from "../App";
+import { API, performGet } from "../Helpers/API";
+
 
 export default function Doctor() {
 
+    const [content, setContent] = React.useState({});
+    const location = useLocation();
+    const language = useContext(LanguageContext);
+
     React.useEffect(() => {
-        let cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)language\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-    }, []);
+
+        if (language === "" || language === undefined || location === undefined)
+            return;
+
+        performGet(API.API_URL_GET_PAGE_CONTENT.replace(":route", location.pathname.replace("/", "")).replace(":language", language)).then(response => {
+
+            setContent(response);
+
+        });
+
+
+    }, [language]);
 
     return (
-        <motion.div className="page-content-container" initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{x: -50, opacity: 1}} transition={{duration: 1, ease: [0.6, -0.05, 0.01, 0.99]}}>
+        <motion.div className="page-content-container" initial={smoothSlideSideways.initial} animate={smoothSlideSideways.animate} exit={smoothSlideSideways.exit} transition={smoothSlideSideways.transition}>
             <div className="page-part">
-                <img className="front-image" src={require("../Images/doc2.png")} />
+                <img className="front-image" src={content.imageUrl} />
             </div>
             <div className="page-part for-text">
                 <div className="header">
-                    <h1>Η γιατρός</h1>
+                    <h1>{content.title}</h1>
                     <br />
                 </div>
                 <div className="text-container">
-                    <h4 className="highlighted-text">Βασικές πληροφορίες</h4>
-                    <h6 className="accent-color info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
-                    <br />
-                    <h4 className="highlighted-text">Σπουδές</h4>
-                    <h6 className="accent-color info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h6>
-                    <br />
-                    <h4 className="highlighted-text">Περιστατικά</h4>
-                    <h6 className="accent-color info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br /> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h6>
-                </div>
+                    {
+                        content.headers?.map((header, index) => {
 
+                            return (
+                                <div key={index}>
+                                    <h4 className="highlighted-text" key={index}>{header}</h4>
+                                    <h6 className="accent-color info-text" key={`${index}${index}`}>{content.paragraphs[index]}</h6>
+                                    <br />
+                                </div>);
+                        })
+                    }
+                </div>
             </div>
         </motion.div>
     );

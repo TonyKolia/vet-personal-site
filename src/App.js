@@ -8,12 +8,16 @@ import { AnimatePresence } from "framer-motion";
 import "./CSS/style.css";
 import AnimatedRoutes from "./AnimatedRoutes";
 
+
+export const LanguageContext = React.createContext();
+
 function App() {
 
   const [cookie, setCookie] = useCookies(['language']);
 
   const [language, setLanguage] = React.useState("");
 
+  //initialize the language based on stored cookie or create cookie for first time visit
   React.useEffect(() => {
 
     let cookieLanguage = document.cookie.replace(/(?:(?:^|.*;\s*)language\s*\=\s*([^;]*).*$)|^.*$/, "$1");
@@ -26,6 +30,7 @@ function App() {
 
   }, []);
 
+  //used to hide the navbar on selection for burger menu
   React.useEffect(() => {
 
     window.addEventListener("resize", () => document.body.style.backgroundSize = `${window.innerWidth}px ${window.innerHeight}px`);
@@ -43,7 +48,7 @@ function App() {
 
   }, []);
 
-
+  //used to update language cookie and tab title on language change
   React.useEffect(() => {
     setCookie("language", language, { path: "/" });
 
@@ -57,15 +62,17 @@ function App() {
   return (
     <>
       <CookiesProvider>
-        <Router>
-          <div className="main-container">
-            <CustomNavbar setLanguage={setLanguage} language={language} />
-            <AnimatePresence>
-              <AnimatedRoutes />
-            </AnimatePresence>
-            <Footer />
-          </div>
-        </Router>
+        <LanguageContext.Provider value={language}>
+          <Router>
+            <div className="main-container">
+              <CustomNavbar setLanguage={setLanguage} />
+              <AnimatePresence>
+                <AnimatedRoutes />
+              </AnimatePresence>
+              <Footer />
+            </div>
+          </Router>
+        </LanguageContext.Provider>
       </CookiesProvider>
     </>
   );
