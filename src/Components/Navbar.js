@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { API, performGet } from "../Helpers/API";
+import { API } from "../Helpers/API";
 import { smoothSlideSideways } from "../Helpers/Animations";
 import {LanguageContext} from "../App";
 
@@ -18,12 +18,15 @@ export default function CustomNavbar(props) {
 
         if (language === "" || language === undefined)
             return;
+        
+        fetch(API.API_URL_GET_ACTIVE_PAGES.replace(":language", language), { method: "GET" }).then(res => {
+            
+            if(res.status !== 200)
+                return;
 
-        performGet(API.API_URL_GET_ACTIVE_PAGES.replace(":language", language)).then(response => {
-
-            setPages(response);
-
-        });
+            return res.json(); 
+            
+        }).then(response => setPages(response));
 
     }, [language])
 

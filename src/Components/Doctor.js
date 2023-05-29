@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { smoothSlideSideways } from "../Helpers/Animations";
 import { useLocation } from "react-router-dom";
 import { LanguageContext } from "../App";
-import { API, performGet } from "../Helpers/API";
+import { API, replaceParams, formatLocation } from "../Helpers/API";
 
 
 export default function Doctor() {
@@ -13,24 +13,31 @@ export default function Doctor() {
     const location = useLocation();
     const language = useContext(LanguageContext);
 
+    const params = {
+        route: formatLocation(location),
+        language: language
+    }
+
     React.useEffect(() => {
 
         if (language === "" || language === undefined || location === undefined)
             return;
 
-        performGet(API.API_URL_GET_PAGE_CONTENT.replace(":route", location.pathname.replace("/", "")).replace(":language", language)).then(response => {
+        fetch(replaceParams(API.API_URL_GET_PAGE_CONTENT, params), { method: "GET" }).then(res => {
+            
+            if (res.status !== 200)
+                return;
+            //do things
+            return res.json();
 
-            setContent(response);
-
-        });
-
+        }).then(response => setContent(response));
 
     }, [language]);
 
     return (
         <motion.div className="page-content-container" initial={smoothSlideSideways.initial} animate={smoothSlideSideways.animate} exit={smoothSlideSideways.exit} transition={smoothSlideSideways.transition}>
             <div className="page-part">
-                <img className="front-image" src={content.imageUrl} />
+                {content.imageName && <img className="front-image" src={API.API_URL_GET_PAGE_IMAGE.replace(":imageName", content?.imageName)} />}
             </div>
             <div className="page-part for-text">
                 <div className="header">
